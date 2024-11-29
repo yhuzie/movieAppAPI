@@ -11,7 +11,7 @@ const movieRoutes = require("./routes/movies");
 app.use("/users", userRoutes);
 app.use("/movies", movieRoutes);
 
-mongoose.connect(process.env.MONGODB_STRING, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb+srv://admin123:admin123@wdc028-b461.2niyc.mongodb.net/movieApp?retryWrites=true&w=majority&appName=WDC028-B461", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.error("Database connection error:", err));
 
